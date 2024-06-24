@@ -1,0 +1,30 @@
+{
+  "name": "12_xyz_inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "netlify deploy --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-await-foreach": "^1.0.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "ddos": "^0.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.14",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "express": "^4.19.2",
+    "gh-pages": "^6.1.1",
+    "netlify-cli": "^17.29.0",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
+  }
+}

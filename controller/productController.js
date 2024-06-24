@@ -2,18 +2,18 @@ const express = require('express');
 const product = require('../model/productModel');
 const config = require('../common/config.json');
 const jwt = require('jsonwebtoken');
-const Authorize = require('../common/tokenValidator');
+// const Authorize = require('../common/tokenValidator');
 const enums = require('../common/enum');
 const log = require('../model/logModel');
 var router = express.Router();
-router.use(Authorize); // check is validate token
+// router.use(Authorize); // check is validate token
 
 var fileName = __filename.slice(__dirname.length + 1);
 // fileName = fileName.slice(0, -3);
 
 // add new product
 router.post('/', async (req, res) => {
-    const userModel = jwt.verify(req.get("authorization"), config.secret); // get logged in user details
+    // const userModel = jwt.verify(req.get("authorization"), config.secret); // get logged in user details
     try {
         var result = await product.Product_Save(req.body);
         res.status(200).json("OK");
